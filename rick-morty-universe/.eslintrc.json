@@ -1,0 +1,89 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "eslint-plugin-prettier"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "import/no-duplicates": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-no-constructed-context-values": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "css": "never",
+        "": "never"
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "off",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/camelcase": "off"
+  }
+  // "rules": {
+  //     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  //     "import/extensions": [
+  //         "error",
+  //         "ignorePackages",
+  //         {
+  //           "js": "never",
+  //           "jsx": "never",
+  //           "ts": "never",
+  //           "tsx": "never"
+  //         }
+  //      ]
+  // }
+
+  //"import/resolver": 1,
+}
